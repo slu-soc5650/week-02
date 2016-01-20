@@ -64,7 +64,7 @@ none
 // ==========================================================================
 
 // to open a stata sample file:
-sysuse census
+sysuse gnp96.dta
 
 // to list the variables in that sample file:
 describe
