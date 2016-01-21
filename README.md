@@ -1,10 +1,28 @@
 # Week 02
 
 This repository contains files for:
-- lecture02.do 
-- sampledata.csv
-- sampledata.dta
-- sampledata.xlsx
+- commands-02
+  - cd.pdf - Stata documentation for `cd` command
+  - clear.pdf - Stata documentation for `clear` command
+  - do-files.pdf - Stata documentation for do-files
+  - import-delimited.pdf - Stata documentation for `import delimited` command
+  - import-excel.pdf - Stata documentation for `import excel` command
+  - save.pdf - Stata documentation for `save` command
+  - use.pdf - Stata documentation for `use` command
+  - week-02-stata-commands.pdf - Course documentation for all commands covered in Week 2
+- lab-02
+  - census.csv - lab data in csv format
+  - census.dta - lab data in Stata dataset format
+  - census.xlsx - lab data in Excel format
+  - lab02-code.do - Stata code for replicating lab questions
+  - lab02-handout.pdf - lab questions
+- lecture-02
+  - lecture02-code.do - Stata code for replicating lecture examples
+  - sampledata.csv - lecture data in csv format
+  - sampledata.dta - lecture data in Stata dataset format
+  - sampledata.xlsx - lecture data in Excel format
+- LICENSE.md
+- README.md
 
 ### About SOC 4650/5650
 This class introduces both the theoretical and technical skills that constitute the nascent field of Geographic Information Science (GISc). The course focuses on social, economic, and health data - all key topics for social science researchers. We also focus on skills needed to work with “big” data - data that are too numerous or complex to be cleaned manually. While the examples may be specific to the social sciences, the theories and skills that are covered are broadly applicable across the social and natural sciences as well as the humanities. 
