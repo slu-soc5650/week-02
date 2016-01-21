@@ -24,7 +24,7 @@ purpose - week 2 replication file
 	                                                                               
 created - 20 Jan 2016
 
-updated - 20 Jan 2016
+updated - 21 Jan 2016
                                                                                 
 author - CHRIS
 */                                                                              
@@ -39,7 +39,8 @@ editing before use.
 
 /* 
 updates - 
-none
+21 Jan 2016 - file paths updated to reflect proper use of the backslash 
+in Windows OS.
 */
 
 // ==========================================================================
@@ -98,11 +99,11 @@ pwd
 
 // to change your working directory:
 // cd [folder name]
-cd E:/Users/{insert username here}/Desktop/
+cd E:\Users\{insert username here}\Desktop
 
 /* if file name or folder has a space, path must be surrounded
 with quotes: */
-// cd “E:/Users/prenercg/Desktop/Week 1”
+// cd “E:\Users\{insert username here}\Desktop\Week 1”
 
 // ==========================================================================
 
@@ -115,11 +116,11 @@ with quotes: */
 use sampledata.dta
 
 // if data is not in working directory, supply full file path:
-// use E:/Users/prenercg/Desktop/sampledata.dta
+// use E:\Users\{insert username here}\Desktop\sampledata.dta
 
 /* if file name or folder has a space, path must be surrounded
 with quotes: */
-// use “E:/Users/prenercg/Desktop/Week 1/sampledata.dta” 
+// use “E:\Users\{insert username here}\Desktop\Week 1\sampledata.dta” 
 
 // ==========================================================================
 

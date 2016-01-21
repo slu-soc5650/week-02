@@ -1,0 +1,219 @@
+% set document atributes, margins, and paper size:
+\documentclass[letterpaper,11pt]{article} 
+\usepackage[margin=1in]{geometry}
+\usepackage{fontawesome,url}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+
+% set color attributes:
+\usepackage[dvipsnames]{xcolor}
+
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{1}
+
+% ============================================================
+
+% define the title
+\title{Introduction to Geographic Information Science \\ \large Week 02 Stata Commands}
+\author{Christopher G. Prener, Ph.D.}
+\date{Spring, 2016}
+
+% ============================================================
+\begin{document}
+% ============================================================
+\maketitle % generates the title
+% ============================================================
+\tableofcontents
+% ============================================================
+\newpage
+\section{Comments}
+\subsection{Syntax}
+\texttt{{\color{Green}// [comment text]}}\\
+\texttt{{\color{Green}/* [comment text] */}}\\
+
+\subsection{Basic Examples}
+\texttt{{\color{Green}// This is a single line comment}}\\
+\\
+\texttt{{\color{Green}/* This is a \\ multi-line comment */}}\\
+\\
+Note that multi-line comments may include one or more carriage returns.\\
+\subsection{Divider Examples}
+\texttt{{\color{Green}// ==============================================================================}}\\
+\texttt{{\color{Green}// 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}}\\
+
+\subsection{Notes}
+Comments can only be used in do-file text. They cannot be entered interactively into the command box in the main window. Use comments to annotate your work, document the purpose of a do-file, and track changes that you make to your code. Dividers can be entered into your do-files to separate groups of commands. These increase the readability and organization of your do-files. \\
+\\
+Additional details can be found in the Stata documentation for do-files on page 3 (\href{http://www.stata.com/manuals14/u16.pdf}{link}).\\
+% ============================================================
+\newpage
+\section{Working Directory}
+\subsection{Syntax}
+\texttt{{\color{Red}pwd}}\\
+\texttt{{\color{Red}cd} ["]folder\_path["]}\\
+\texttt{{\color{Red}cd} ["]folder\_name["]}\\
+
+\subsection{Windows OS Examples}
+The \texttt{{\color{Red}pwd}} command (``print working directory'') is used to display the current working directory: \\
+\texttt{. {\color{Red}pwd}}  \\
+\texttt{E:\textbackslash{}Users\textbackslash{}username\textbackslash{}Desktop} \\
+\\
+The \texttt{{\color{Red}cd}} command (``change directory'') is used change to a new working directory: \\
+\texttt{. {\color{Red}cd} E:\textbackslash{}Users\textbackslash{}username\textbackslash{}Documents}  \\
+\texttt{E:\textbackslash{}Users\textbackslash{}username\textbackslash{}Documents} \\
+\\
+If your working directory (in this case the ``Documents'' directory) contained a sub-directory named ``Working'', you would use the following syntax:\\
+\texttt{. {\color{Red}pwd}}  \\
+\texttt{E:\textbackslash{}Users\textbackslash{}username\textbackslash{}Documents} \\
+\texttt{. {\color{Red}cd} Working}  \\
+\texttt{E:\textbackslash{}Users\textbackslash{}username\textbackslash{}Documents\textbackslash{}Working} \\
+\\
+If you wanted to navigate from a sub-directory to a parent directory, you would use the following syntax:\\
+\texttt{. {\color{Red}pwd}}  \\
+\texttt{E:\textbackslash{}Users\textbackslash{}username\textbackslash{}Documents\textbackslash{}Working} \\
+\texttt{. {\color{Red}cd} ..}  \\
+\texttt{E:\textbackslash{}Users\textbackslash{}username\textbackslash{}Documents} \\
+\\
+Note that the \texttt{{\color{Red}pwd}} command is not required in either of the last two examples. It is only included for illustrative purposes.\\
+\subsection{Mac OS Examples}
+The \texttt{{\color{Red}pwd}} command (``print working directory'') is used to display the current working directory: \\
+\texttt{. {\color{Red}pwd}}  \\
+\texttt{/Users/username/Desktop} \\
+The \texttt{{\color{Red}cd}} command (``change directory'') is used change to a new working directory: \\
+\texttt{. {\color{Red}cd} /Users/username/Documents}  \\
+\texttt{/Users/username/Documents} \\
+\\
+If your working directory (in this case the ``Documents'' directory) contained a sub-directory named ``Working'', you would use the following syntax:\\
+\texttt{. {\color{Red}pwd}}  \\
+\texttt{/Users/username/Documents} \\
+\texttt{. {\color{Red}cd} Working}  \\
+\texttt{/Users/username/Documents/Working} \\
+\\
+If you wanted to navigate from a sub-directory to a parent directory, you would use the following syntax:\\
+\texttt{. {\color{Red}pwd}}  \\
+\texttt{/Users/username/Documents/Working} \\
+\texttt{. {\color{Red}cd} ..}  \\
+\texttt{/Users/username/Documents} \\
+\\
+Note that the \texttt{{\color{Red}pwd}} command is not required in either of the last two examples. It is only included for illustrative purposes.\\
+\subsection{File Paths or Names With Spaces}
+File paths or names that contain one or more spaces require double quotes (``'') around the path:
+\texttt{. {\color{Red}cd} ``E:\textbackslash{}Users\textbackslash{}username\textbackslash{}Three Word Folder''}  \\
+\texttt{E:\textbackslash{}Users\textbackslash{}username\textbackslash{}Three Word Folder} \\
+\\
+This requirement holds true for any commands that utilize file or folder paths or names.\\
+\subsection{Notes}
+Additional details can be found in the Stata documentation for the \texttt{{\color{Red}cd}}  command (\href{http://www.stata.com/manuals14/dcd.pdf}{link}).\\
+% ============================================================
+\newpage
+\section{Opening Stata Datasets}
+\subsection{Syntax}
+\texttt{{\color{Red}use} ["]file\_name["]}\\
+\subsection{Example}
+To open a file in your working directory: \\
+\texttt{. {\color{Red}use} data.dta}  \\
+\\
+To open a file in your working directory that has one or more spaces in the file name: \\
+\texttt{. {\color{Red}use} ``three word data.dta''}  \\
+\subsection{Notes}
+The file name can also be substituted for a full or relative file path if necessary. Examples of this as well as additional details can be found in the Stata documentation for the \texttt{{\color{Red}use}} command (\href{http://www.stata.com/manuals14/duse.pdf}{link}).\\
+% ============================================================
+\newpage
+\section{Saving Stata Datasets}
+\subsection{Syntax}
+\texttt{{\color{Red}save} ["]file\_name["] [, options]}\\
+
+\subsection{Options}
+The \texttt{replace} option allows you to overwrite an existing file.
+
+\subsection{Example}
+To save a file under a new filename (the equivalent of `Save As'): \\
+\texttt{. {\color{Red}save} newFileName.dta}  \\
+\\
+To save a file under its current file name, thereby overwriting the current data (the equivalent of `Save'): \\
+\texttt{. {\color{Red}save} currentFileName.dta, replace}  \\
+
+\subsection{Notes}
+The file name can also be substituted for a full or relative file path if necessary. Examples of this as well as additional details can be found in the Stata documentation for the \texttt{{\color{Red}save}} command (\href{http://www.stata.com/manuals14/dsave.pdf}{link}).\\
+% ============================================================
+\newpage
+\section{Importing CSV Files}
+\subsection{Syntax}
+\texttt{{\color{Red}import delimited} ["]file\_name["] [, options]}\\
+
+\subsection{Options}
+The most important option for basic uses is the \texttt{varnames(\#)} option. This specifies the row that contains variable names. \\
+
+\subsection{Example}
+To import a CSV file in your working directory that has no variable names included: \\
+\texttt{. {\color{Red}import delimited} data.csv}  \\
+\texttt{(2 vars, 5 obs)}\\
+\\
+To import a CSV file in your working directory that has variable names saved in the first row: \\
+\texttt{. {\color{Red}import delimited} data.csv, varnames(1)}  \\
+\texttt{(2 vars, 5 obs)} \\
+\\
+It is important to review your data before you import it to understand whether or not you need to specify variable names when you import the data. Data saved as CSV files can be opened using Microsoft Excel or another spreadsheet application. \\
+\\
+If you import data and notice that the variable names Stata creates appear to actually be data, that is a tip-off that there may not be variable names included in the spreadsheet and you should not use the \texttt{varnames(1)} option. Likewise, if you import the data and notice that variables have been named \texttt{v1}, \texttt{v2}, etc., you will likely find that the variable names have been saved in the first observation. You should therefore use the \texttt{varnames(1)} option.\\
+
+\subsection{Notes}
+The file name can also be substituted for a full or relative file path if necessary. Examples of this as well as additional details can be found in the Stata documentation for the \texttt{{\color{Red}import delimited}} command (\href{http://www.stata.com/manuals14/dimportdelimited.pdf}{link}).\\
+% ============================================================
+\newpage
+\section{Importing Excel Files}
+\subsection{Syntax}
+\texttt{{\color{Red}import excel} ["]file\_name["] [, options]}\\
+
+\subsection{Options}
+There are two common options for importing Excel files. The first is the \texttt{sheet("sheetname") option}. By default, new workbooks in Excel have one sheet named ``Sheet1''. I recommend starting with this as your default import option: \texttt{sheet(``Sheet1'')}. The second option is the \texttt{firstrow} option, which instructs Stata to treat the first row of data in the spreadsheet as the variable names. \\
+
+\subsection{Example}
+To import an Excel file in your working directory that has data saved in ``Sheet1'' and variable names saved in the first row: \\
+\texttt{. {\color{Red}import delimited} data.xls, sheet(``Sheet1'') varnames(1)}  \\
+\\
+As with CSV files, it is important to review your data before you import it to understand whether or not you need to specify variable names when you import the data. \\
+
+\subsection{Notes}
+This command will work for both Excel 1997/2003 (.xls) files as well as Excel 2007 and later (.xlsx) files. When you use the \texttt{{\color{Red}import excel}} command, specify the file type (.xls or .xlsx when you declare the file name). Stata imposes a size limit of 40 MB for Excel 2007 and later (.xlsx) files. \\
+\\
+The file name can also be substituted for a full or relative file path if necessary. Examples of this as well as additional details can be found in the Stata documentation for the \texttt{{\color{Red}import excel}} command (\href{http://www.stata.com/manuals14/dimportexcel.pdf}{link}).\\
+% ============================================================
+\newpage
+\section{Clearing Stata's Memory}
+\subsection{Syntax}
+\texttt{{\color{Red}clear}}\\
+
+\subsection{Example}
+Entered by itself with no options, the \texttt{{\color{Red}clear}} command will erase all data from Stata's memory. This is a necessary command to run before importing new data if you are not saving the data currently in Stata's memory.  \\
+
+\subsection{Notes}
+If you have not saved your work and you run the \texttt{{\color{Red}clear}} command, you will lose that work permanently. Stata will not warn you before executing this command. \\
+\\
+Additional details can be found in the Stata documentation for the \texttt{{\color{Red}clear}} command (\href{http://www.stata.com/manuals14/dclear.pdf}{link}).\\
+% ============================================================
+\newpage
+\section{Common Errors}
+\subsection{Error 4: Data in Memory Would Be Lost}
+When opening data using the \texttt{{\color{Red}use}} command, or when importing data using the \texttt{{\color{Red}import delimited}} or \texttt{{\color{Red}import excel}} commands, you may received this error: \\
+\texttt{. import delimited E:\textbackslash{}Users\textbackslash{}username\textbackslash{}Documents\textbackslash{}data.csv}\\
+\texttt{{\color{Red}no; data in memory would be lost}}\\
+\texttt{{\color{Blue}r(4);}}\\
+\\
+This error indicates that you have unsaved data in Stata's memory. Save your data or use the \texttt{{\color{Red}clear}} command.\\
+\subsection{Error 198: Invalid Syntax}
+When referencing a file using the \texttt{{\color{Red}use}}, \texttt{{\color{Red}save}}, \texttt{{\color{Red}import delimited}}, or \texttt{{\color{Red}import excel}} commands, you may receive this error: \\
+\texttt{. cd E:\textbackslash{}Users\textbackslash{}username\textbackslash{}Documents\textbackslash{}Week 2}\\
+\texttt{{\color{Red}invalid syntax}}\\
+\texttt{{\color{Blue}r(198);}}\\
+\\
+This error indicates that there is likely a space in the given file or directory path. Enclosing the full path in double quotes (``'') should rectify this error.\\
+\subsection{Error 601: Data Not Found}
+When referencing a file using the \texttt{{\color{Red}use}}, \texttt{{\color{Red}save}}, \texttt{{\color{Red}import delimited}}, or \texttt{{\color{Red}import excel}} commands, you may receive this error: \\
+\texttt{. use E:\textbackslash{}Users\textbackslash{}username\textbackslash{}Documents\textbackslash{}data.dta} \\
+\texttt{{\color{Red}file E:\textbackslash{}Users\textbackslash{}username\textbackslash{}Documents\textbackslash{}data.dta not found}} \\
+\texttt{{\color{Blue}r(601);}} \\
+\\
+This error indicates one of two conditions: (1) the file is not in the directory specified or, if only a file name was specified, is not in the working directory, or (2) there is a misspelling in either the file name or file path. \\
+% ============================================================
+\end{document}
