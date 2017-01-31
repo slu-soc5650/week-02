@@ -1,0 +1,168 @@
+# Markdown and Stata Snippets for Atom
+# Produced by Christopher Prener, PhD
+# Saint Louis University
+# SOC 4650/5650: Intro to GIS
+#
+# README and licensing: https://github.com/slu-soc5650/Week-02
+#
+# To install, add this text below the final comment in your Atom snippets.cson
+# file. To open this file, go to Atom > Snippets on Mac and File > Snippets
+# on Windows.
+#
+# Once installed, you can begin typing the 'prefix' text into your Atom
+# document. Note that you need to have switched the document type to Stata
+# before using the snippets below.
+#
+# After placing the snippet into your document, you can use the 'tab' key
+# to move through the fill-in fields in both do-file templates. After you
+# type into one field, you can hit the 'tab' button again to move to the
+# next field.
+
+# Stata Snippets:
+
+'.source.stata':
+  'Divider Level 1':
+    'prefix': 'div1'
+    'body': '// =========================================================================='
+  'Divider Level 2':
+    'prefix': 'div2'
+    'body': '// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+  'Single Do-File Header':
+    'prefix': 'headFull'
+    'body': """
+            // ==========================================================================
+
+            // ${1:/*enter a title*/}
+
+            // ==========================================================================
+
+            // define project name
+
+            local projName "${2:/*enter a project name*/}"
+
+            // ==========================================================================
+
+            // standard opening options
+
+            log close _all
+            graph drop _all
+            clear all
+            set more off
+            set linesize 80
+
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+            // construct directory structure for tabular data
+
+            capture mkdir "CodeArchive"
+            capture mkdir "DataClean"
+            capture mkdir "DataRaw"
+            capture mkdir "LogFile"
+            capture mkdir "Output"
+
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+            // create permanent text-based log file
+            log using "LogFile/`projName'.txt", replace text name(permLog)
+
+            // create temporary smcl log file for MarkDoc
+            quietly log using "LogFile/`projName'.smcl", replace smcl name(tempLog)
+
+            // ==========================================================================
+            // ==========================================================================
+            // ==========================================================================
+
+            /***
+            # ${3:/*enter a title for your analysis*/}
+            #### SOC 4650/5650: Intro to GIS
+            #### ${4:/*enter your name*/}
+            #### ${5:/*enter today's date*/}
+
+            ### Description
+            ${6:/*enter a description of what this file does*/}
+
+            ### Dependencies
+            This do-file was written and executed using Stata 14.2.
+
+            It also uses the latest [MarkDoc](https://github.com/haghish/markdoc/wiki)
+            package via GitHub as well as the latest versions of its dependencies:
+            ***/
+
+            version 14
+            which markdoc
+            which weave
+            which statax
+
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+            /***
+            ### Import/Open Data
+            ***/
+
+            local rawData "${7:/*enter data file name with extension*/}"
+
+            /* continue adding narrative and code chunks here */
+
+
+
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+            /***
+            ### Save and Export Clean Data
+            ***/
+
+            save "DataClean/`projName'.dta", replace
+            export delimited "DataClean/`projName'.csv", replace
+
+            // ==========================================================================
+            // ==========================================================================
+            // ==========================================================================
+
+            // end MarkDoc log
+
+            /*
+            quietly log close tempLog
+            */
+
+            // convert MarkDoc log to Markdown
+
+            markdoc "LogFile/`projName'", replace export(md)
+            copy "LogFile/`projName'.md" "Output/`projName'.md", replace
+            shell rm -R "LogFile/`projName'.md"
+            shell rm -R "LogFile/`projName'.smcl"
+
+            // ==========================================================================
+
+            // archive code and raw data
+
+            copy "`projName'.do" "CodeArchive/`projName'.do", replace
+            copy "`rawData'" "DataRaw/`rawData'", replace
+
+            // ==========================================================================
+
+            // standard closing options
+
+            log close _all
+            graph drop _all
+            set more on
+
+            // ==========================================================================
+
+            exit
+
+            """
+
+# Markdown Snippets:
+
+'.source.gfm':
+  'Assignment Structure':
+    'prefix': 'headMarkdown'
+    'body': """
+            # ${1:/*enter a title for your assignment*/}
+            #### SOC 4650/5650: Intro to GIS
+            #### ${2:/*enter your name*/}
+            #### ${3:/*enter today's date*/}
+
+            ### Part 1
+            **1.** ${4:/*enter question 1 answer*/}
+            """
