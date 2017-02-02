@@ -1,7 +1,9 @@
 # week-02
 
 This repository contains files for:
+-   `Atom/` - atom snippets for structuring assignment files
 -   `Lab/` - lab instructions
+-   `Lecture/` - code replicating lecture examples
 -   `Slides/` - lecture slides
 -   `Stata/` - documentation for week's Stata commands
 -   `.gitignore`
