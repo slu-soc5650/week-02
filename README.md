@@ -1,17 +1,13 @@
 lecture-02 <img src="https://slu-soc5650.github.io/images/logo.png" align="right" />
 ===========================================================
-[![](https://img.shields.io/badge/semester-spring%202017-orange.svg)](https://github.com/slu-soc5650/lecture-02)
-[![](https://img.shields.io/badge/release-updated-brightgreen.svg)](https://github.com/slu-soc5650/lecture-02)
+[![](https://img.shields.io/badge/semester-spring%202018-orange.svg)](https://github.com/slu-soc5650/lecture-02)
+[![](https://img.shields.io/badge/release-LP%20only-red.svg)](https://github.com/slu-soc5650/lecture-02)
 [![](https://img.shields.io/github/release/slu-soc5650/lecture-02.svg?label=version)](https://github.com/slu-soc5650/lecture-02/releases)
 [![](https://img.shields.io/github/last-commit/slu-soc5650/lecture-02.svg)](https://github.com/slu-soc5650/lecture-02/commits/master)
 [![](https://img.shields.io/github/repo-size/slu-soc5650/lecture-02.svg)](https://github.com/slu-soc5650/lecture-02)
 
 This repository contains files for:
--   `Atom/` - atom snippets for structuring assignment files
--   `Lab/` - lab instructions
--   `Lecture/` - code replicating lecture examples
--   `Slides/` - lecture slides
--   `Stata/` - documentation for week's Stata commands
+-   `LP-02/` - files related to lecture prep 02
 -   `.gitignore`
 -   `LICENSE.md`
 -   `README.md`

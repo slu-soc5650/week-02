@@ -1,0 +1,17 @@
+---
+title: "Lecture Prep 02 Notebook"
+author: "Christopher Prener, Ph.D."
+date: '(`r format(Sys.time(), "%B %d, %Y")`)'
+output: 
+  github_document: default
+  html_notebook: default 
+---
+
+## Introduction
+This is my first R Notebook!
+
+## Project Set Up
+
+```{r setup}
+knitr::opts_knit$set(root.dir = here::here())
+```

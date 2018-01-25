@@ -1,4 +1,4 @@
-# lecture-02 v18.1.1.9000
+# lecture-02 v18.1.0
 
 ## Changes
 * Add `NEWS.md`
@@ -6,3 +6,4 @@
 * Add new licenses
 * Update `.gitignore`
 * Add `NEWS_SITE.md` for tracking changes specific to the corresponding page on the course website
+* Add Lecture Prep 01 instructions
