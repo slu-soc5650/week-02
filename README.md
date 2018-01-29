@@ -1,13 +1,14 @@
 lecture-02 <img src="https://slu-soc5650.github.io/images/logo.png" align="right" />
 ===========================================================
 [![](https://img.shields.io/badge/semester-spring%202018-orange.svg)](https://github.com/slu-soc5650/lecture-02)
-[![](https://img.shields.io/badge/release-LP%20only-red.svg)](https://github.com/slu-soc5650/lecture-02)
+[![](https://img.shields.io/badge/release-draft-red.svg)](https://github.com/slu-soc5650/lecture-02)
 [![](https://img.shields.io/github/release/slu-soc5650/lecture-02.svg?label=version)](https://github.com/slu-soc5650/lecture-02/releases)
 [![](https://img.shields.io/github/last-commit/slu-soc5650/lecture-02.svg)](https://github.com/slu-soc5650/lecture-02/commits/master)
 [![](https://img.shields.io/github/repo-size/slu-soc5650/lecture-02.svg)](https://github.com/slu-soc5650/lecture-02)
 
 This repository contains files for:
 -   `LP-02/` - files related to lecture prep 02
+-   `Workflows/` - workflow handouts for projects and Git
 -   `.gitignore`
 -   `LICENSE.md`
 -   `README.md`
