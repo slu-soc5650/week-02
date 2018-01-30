@@ -1,3 +1,8 @@
+# lecture-02 v18.4.1
+
+* Revise Lab-01 to remove reprex
+* Remove Types of Data section and reprex reference from lecture slides
+
 # lecture-02 v18.4.0
 
 * Fix typo in q8 of the second exercise
