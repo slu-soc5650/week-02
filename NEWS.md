@@ -1,6 +1,23 @@
+# lecture-02 v18.4.0
+
+* Fix typo in q8 of the second exercise
+* Add the git workflow handout
+* Update the reprex workflow handout
+
+# lecture-02 v18.3.0
+
+* Add reprex workflow handout
+* Add both exercise handouts
+* Add functions sheet
+* Add lab-01 handout
+* Add slides
+
+# lecture-02 v18.2.0
+
+* Add projects workflow handout
+
 # lecture-02 v18.1.0
 
-## Changes
 * Add `NEWS.md`
 * Updates to `README.md` to add badges as well as course and SLU logos
 * Add new licenses
