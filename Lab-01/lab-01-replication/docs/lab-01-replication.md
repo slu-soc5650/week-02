@@ -39,7 +39,7 @@ Part 1
 
 ### Question 10
 
-The first question in this assignment asks for a histogram of the `pctElevated` variable.
+The first substantive question in this assignment asks for a histogram of the `mi15` variable.
 
 ``` r
 ggplot() +
@@ -49,6 +49,8 @@ ggplot() +
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
 ![](lab-01-replication_files/figure-markdown_github/income-plot-01-1.png)
+
+We can see that the bulk of census tracts have a median income of around $20,000. There is another peak in median income around $50,000. These data speak to the relative poverty that many St. Louis neighborhoods experience.
 
 ### Question 11
 

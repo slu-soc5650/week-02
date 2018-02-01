@@ -33,16 +33,18 @@ medianInc <- stlIncome
 
 ## Part 1
 ### Question 10
-The first question in this assignment asks for a histogram of the `pctElevated` variable.
+The first substantive question in this assignment asks for a histogram of the `mi15` variable.
 
 ```{r income-plot-01}
 ggplot() +
   geom_histogram(medianInc, mapping = aes(mi15))
 ```
 
+We can see that the bulk of census tracts have a median income of around \$20,000. There is another peak in median income around \$50,000. These data speak to the relative poverty that many St. Louis neighborhoods experience.
+
 ### Question 11
 Next, we want to save our plot using the `ggsave()` function:
 
-```{r}
+```{r save-plot-01}
 ggsave("results/incomeHistogram.png")
 ```
