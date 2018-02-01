@@ -1,3 +1,8 @@
+# lecture-02 v18.4.2
+
+* add replication files for both the in-class exercises (saved as one set of replication files)
+* add replication files for Lab-01
+
 # lecture-02 v18.4.1
 
 * Revise Lab-01 to remove reprex
