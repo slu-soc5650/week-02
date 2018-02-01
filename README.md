@@ -7,8 +7,12 @@ lecture-02 <img src="https://slu-soc5650.github.io/images/logo.png" align="right
 [![](https://img.shields.io/github/repo-size/slu-soc5650/lecture-02.svg)](https://github.com/slu-soc5650/lecture-02)
 
 This repository contains files for:
+-   `Exercises` - handouts for both in-class exercises and replication files
+-   `Functions` - functions handout
+-   `Lab-01/` - handout and replication files for lab 01
 -   `LP-02/` - files related to lecture prep 02
--   `Workflows/` - workflow handouts for projects and Git
+-   `Slides` - lecture slides
+-   `Workflows/` - workflow handouts for projects, reprex, and Git
 -   `.gitignore`
 -   `LICENSE.md`
 -   `README.md`
